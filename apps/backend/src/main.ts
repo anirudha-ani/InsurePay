@@ -2,6 +2,7 @@ import express from 'express';
 import userRoutes from './routes/user';
 import insurancePlanRoutes from './routes/insurancePlan';
 import insurancePolicyRoutes from './routes/insurancePolicy';
+import financeTermsRoutes from './routes/financeTerms';
 
 const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
@@ -13,6 +14,7 @@ import {sequelize} from './config/database';
 import User from './models/User';
 import InsurancePlan from './models/InsurancePlan';
 import InsurancePolicy from './models/InsurancePolicy';
+import FinanceTerms from './models/FinanceTerms';
 
 // Connect to the database
 (async () => {
@@ -22,6 +24,7 @@ import InsurancePolicy from './models/InsurancePolicy';
     await User.sync(); 
     await InsurancePlan.sync();
     await InsurancePolicy.sync();
+    await FinanceTerms.sync();
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
@@ -31,6 +34,7 @@ import InsurancePolicy from './models/InsurancePolicy';
 app.use('/users', userRoutes);
 app.use('/insurance-plans', insurancePlanRoutes);
 app.use('/insurance-policies', insurancePolicyRoutes);
+app.use('/finance-terms', financeTermsRoutes);
 
 
 app.get('/', (req, res) => {
