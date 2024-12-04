@@ -6,10 +6,30 @@ This documentation provides an overview of the available APIs for managing users
 
 ## Table of Contents
 
+- [Running the Backend](#running-the-backend)
 - [User API](#user-api)
 - [Insurance Plan API](#insurance-plan-api)
 - [Insurance Policy API](#insurance-policy-api)
 - [Finance Terms API](#finance-terms-api)
+
+## Running the Backend
+
+To run the backend server, you need to have Node.js installed on your machine. 
+
+```bash
+npm install
+```
+After that you need to setup the database by running the following command. Either you can setup a postgresql database using this official documentation - https://www.postgresql.org/ or you can use the in-memory SQLite database. 
+
+In either case, you need to update the configuration in the `apps/backend/src/config/database.ts` file. By default the test database is set to use SQLite and development database is set to use PostgreSQL.
+
+You can start the server by running the following commands:
+
+```bash
+nx serve backend
+```
+
+By default the server will run on  http://localhost:3000
 
 ## User API
 
