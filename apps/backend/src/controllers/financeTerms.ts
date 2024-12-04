@@ -39,7 +39,7 @@ export const createFinanceTerms = async (req: Request, res: Response) => {
       status: 'non-agreed',
       insurancePolicyIDs,
     });
-    
+
     res.status(201).json(financeTerms);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -139,9 +139,7 @@ export const listFinanceTermsWithDetails = async (req: Request, res: Response) =
       const amount = parseFloat(downPaymentAmount as string);
       filteredFinanceTerms = await Promise.all(financeTermsWithDetails.filter(async term => {
         const totalDownPayment = term.policies.reduce((sum, policy) => sum + policy.downPayment, 0);
-        console.log("totalDownPayment = ", totalDownPayment);
-        console.log("amount = ", amount);
-        console.log("downPaymentFilter = ", downPaymentFilter);
+  
         if (downPaymentFilter === 'greater') {
           return totalDownPayment > amount;
         } else if (downPaymentFilter === 'less') {

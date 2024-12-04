@@ -31,6 +31,14 @@ nx serve backend
 
 By default the server will run on  http://localhost:3000
 
+## Running the Tests
+
+To run the tests, you can use the following command:
+
+```bash
+NODE_ENV=test DB_DIALECT=sqlite npx jest
+```
+
 ## User API
 
 ### Create a New User

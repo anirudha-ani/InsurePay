@@ -55,7 +55,8 @@ FinanceTerms.init(
       defaultValue: 'non-agreed',
     },
     insurancePolicyIDs: {
-      type: DataTypes.JSONB,
+      // This is problemetic cause JSONB does not work for postgres and ARRAY does not work for sqlite - need to fix this
+      type: process.env.DB_DIALECT === 'sqlite' ? DataTypes.JSONB : DataTypes.ARRAY(DataTypes.INTEGER),
       allowNull: false,
     },
   },
