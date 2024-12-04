@@ -1,5 +1,3 @@
-
-
 # InsurePay
 
 InsurePay is a backend application that manages insurance policies and finance terms for users. It uses Node.js, Express, and PostgreSQL/SQLite to provide a RESTful API for creating, reading, updating, and deleting users, insurance plans, insurance policies, and finance terms. Sequelize is used as the ORM for the database.
@@ -414,16 +412,8 @@ By default the server will run on  http://localhost:3000
 - **Endpoint:** `GET /finance-terms`
 - **Description:** Retrieves a list of finance terms with optional filters and sorting.
 - **Query Parameters:**
-  - 
-
-status
-
-: Filter by status (e.g., `agreed`, `non-agreed`).
-  - `sortBy`: Sort by a specific field (e.g., 
-
-dueDate
-
-).
+  - `status`: Filter by status (e.g., `agreed`, `non-agreed`).
+  - `sortBy`: Sort by a specific field (e.g., `dueDate`).
   - `order`: Sort order (e.g., `ASC`, `DESC`).
   - `downPaymentFilter`: Filter by down payment amount (`greater`, `less`, `equal`).
   - `downPaymentAmount`: The amount to filter by.
