@@ -41,6 +41,9 @@ NODE_ENV=test DB_DIALECT=sqlite npx jest
 
 ## User API
 
+### Postman
+You can import the postman collection from `InsurePay.postman_collection.json` file from root folder to test the APIs.
+
 ### Create a New User
 
 - **Endpoint:** `POST /users`
