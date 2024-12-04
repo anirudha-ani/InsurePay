@@ -31,7 +31,6 @@ describe('FinanceTerms API', () => {
     const response = await request(app)
       .post('/finance-terms')
       .send({ insurancePolicyIDs: [insurancePolicy.id], dueDate: new Date(Date.now() + 120400000), createdBy: user!.id });
-    console.log("Oni response = ", response.body);
     expect(response.status).toBe(201);
     expect(response.body.createdBy).toBe(user!.id);
     expect(response.body.insurancePolicyIDs).toContain(insurancePolicy.id);
@@ -67,7 +66,6 @@ describe('FinanceTerms API', () => {
   it('should list all finance terms', async () => {
     
     const response = await request(app).get('/finance-terms');
-    console.log("data = ", JSON.stringify(response.body));
     expect(response.status).toBe(200);
     expect(response.body.length).toBeGreaterThan(0);
   });
@@ -123,7 +121,6 @@ describe('FinanceTerms API', () => {
     expect(response.status).toBe(200);
     response.body.forEach((term: any) => {
       const totalDownPayment = term.policies.reduce((sum: number, policy: any) => sum + policy.downPayment, 0);
-      console.log("totalDownPayment = ", totalDownPayment);
       expect(totalDownPayment).toBeGreaterThan(50);
     });
   });
