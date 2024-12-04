@@ -1,6 +1,8 @@
 
 
-# API Documentation
+# InsurePay
+
+InsurePay is a backend application that manages insurance policies and finance terms for users. It uses Node.js, Express, and PostgreSQL/SQLite to provide a RESTful API for creating, reading, updating, and deleting users, insurance plans, insurance policies, and finance terms. Sequelize is used as the ORM for the database.
 
 This documentation provides an overview of the available APIs for managing users, insurance plans, insurance policies, and finance terms.
 
