@@ -45,7 +45,8 @@ NODE_ENV=test DB_DIALECT=sqlite npx jest
 
 You can see the excalidraw diagram of the data model in the by importing `InsurePay Dataodel.excalidraw` file from root folder in https://excalidraw.com/
 
-![Untitled-2024-12-04-1135](https://github.com/user-attachments/assets/374fc4cc-431e-410f-87bb-fa87790633cc)
+![Untitled-2024-12-04-1110](https://github.com/user-attachments/assets/c16b0996-3f37-4a8e-a1bb-4299e913457a)
+
 
 
 ### Postman
