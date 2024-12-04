@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "anirudhapaul",
+    "password": null,
+    "database": "insurepay_db",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
