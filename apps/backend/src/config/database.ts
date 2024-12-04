@@ -1,5 +1,6 @@
 const env = process.env.NODE_ENV || 'development';
 
+// Ideally this should be read from a secret manager like AWS Secrets Manager
 const configData = {
   "development": {
     "username": "anirudhapaul",
