@@ -43,7 +43,10 @@ NODE_ENV=test DB_DIALECT=sqlite npx jest
 
 ### DataModel 
 
-You can see the excality of the data model in the by importing `InsurePay Dataodel.excalidraw` file from root folder in https://excalidraw.com/
+You can see the excalidraw diagram of the data model in the by importing `InsurePay Dataodel.excalidraw` file from root folder in https://excalidraw.com/
+
+![Untitled-2024-12-04-1135](https://github.com/user-attachments/assets/374fc4cc-431e-410f-87bb-fa87790633cc)
+
 
 ### Postman
 You can import the postman collection from `InsurePay.postman_collection.json` file from root folder to test the APIs.
